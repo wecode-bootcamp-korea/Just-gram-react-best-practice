@@ -1,7 +1,10 @@
+$theme-color: lightblue;
+$border-color: $theme-color;
+
 .login_container {
   width: 300px;
   padding: 20px 40px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid $border-color;
 }
 
 .login_logo {
@@ -22,7 +25,7 @@
 .login_input {
   width: 100%;
   padding: 10px 5px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid $border-color;
 }
 
 .login_button {
@@ -31,13 +34,21 @@
   width: 100%;
   border: 0;
   border-radius: 5px;
-  background-color: lightskyblue;
   color: white;
+
+  &.active {
+    background-color: blue;
+    cursor: pointer;
+  }
+
+  &.inactive {
+    background-color: $theme-color;
+  }
 }
 
 .divider {
   margin-top: 20px;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid $border-color;
 }
 
 .forget_password {
